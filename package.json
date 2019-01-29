@@ -25,6 +25,7 @@
   "homepage": "https://github.com/dcorredorv/autoestudio-protractor#readme",
   "dependencies": {
     "@types/node": "^10.12.18",
+    "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.4.2",
     "ts-node": "^3.3.0"
   },
