@@ -6,10 +6,11 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc",
-    "test:local": "npm run build && protractor dist/protractor/local.config.js",
+    "test:local": "npm run lint && npm run build && protractor dist/protractor/local.config.js",
     "test:headless": "npm run build && protractor dist/protractor/headless.config.js",
-    "test": "npm run test:headless",
-    "postinstall": "webdriver-manager update --gecko false"
+    "test": "npm run lint && npm run test:headless",
+    "postinstall": "webdriver-manager update --gecko false",
+    "lint": "tslint --project tsconfig.json protractor/**/*.ts test/**/*.ts src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,9 @@
     "@types/node": "^10.12.18",
     "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.4.2",
-    "ts-node": "^3.3.0"
+    "ts-node": "^3.3.0",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1"
   },
   "devDependencies": {
     "@types/jasminewd2": "^2.0.6",
