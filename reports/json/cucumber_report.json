@@ -1,0 +1,73 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "To search protractor in google",
+    "line": 1,
+    "id": "to-search-protractor-in-google",
+    "tags": [],
+    "uri": "features\\evalProtractor.feature",
+    "elements": [
+      {
+        "id": "to-search-protractor-in-google;protractor-google-search",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Protractor Google Search",
+        "tags": [
+          {
+            "name": "@ProtractorScenario",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am on \"cucumber\" search page",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I type \"protractor\"",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I click on search button",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I clear the search text",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
