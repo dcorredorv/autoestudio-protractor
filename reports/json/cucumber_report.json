@@ -1,20 +1,20 @@
 [
   {
     "keyword": "Feature",
-    "name": "To search protractor in google",
+    "name": "To create case",
     "line": 1,
-    "id": "to-search-protractor-in-google",
+    "id": "to-create-case",
     "tags": [],
-    "uri": "features\\evalProtractor.feature",
+    "uri": "tests\\features\\case.feature",
     "elements": [
       {
-        "id": "to-search-protractor-in-google;protractor-google-search",
+        "id": "to-create-case;create-a-case-on-command-center",
         "keyword": "Scenario",
         "line": 4,
-        "name": "Protractor Google Search",
+        "name": "Create a Case on Command Center",
         "tags": [
           {
-            "name": "@ProtractorScenario",
+            "name": "@cases",
             "line": 3
           }
         ],
@@ -24,36 +24,180 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 5,
-            "name": "I am on \"cucumber\" search page",
+            "name": "I selected a location",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:22"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 3077000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 6,
-            "name": "I type \"protractor\"",
+            "name": "I type 'dcorredor' as username",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:25"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 84000000
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "And ",
             "line": 7,
-            "name": "I click on search button",
+            "name": "I type '1111' as password",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:29"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 1072000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I click the Sign In button",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3071000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click on 'officer-dashboard'",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7079000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on 'cases-dashboard'",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7066000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I create a new case",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7194000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I open the new case",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2056000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 8,
-            "name": "I clear the search text",
+            "line": 13,
+            "name": "the case name was saved susccesfully",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:56"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 2034000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the description was saved susccesfully",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the event was saved susccesfully",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the officer was assigned correctly",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the parter was assigned susccesfully",
+            "match": {
+              "location": "dist\\tests\\step_definitions\\createCase.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "dist\\protractor\\helpers\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {

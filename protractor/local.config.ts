@@ -1,3 +1,4 @@
+import * as path from 'path';
 import { Config, browser } from 'protractor';
 import { Reporter } from './helpers/reporter';
 const jsonReportPath = '/reports/json';
@@ -7,20 +8,24 @@ export const config: Config = {
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
   specs: [
-    '../../features/*.feature',
+    '../../tests/features/*.feature',
   ],
-  baseUrl: 'https://www.google.com',
+  capabilities: {
+    browserName: 'chrome',
+  },
+  baseUrl: 'https://qaregression01.usgovvirginia.cloudapp.usgovcloudapi.net:803',
   getPageTimeout: 1000,
   SELENIUM_PROMISE_MANAGER:  false,
   onPrepare: () => {
     browser.ignoreSynchronization = true;
+    browser.manage().timeouts().implicitlyWait(0),
     Reporter.createDirectory(jsonReports);
   },
   cucumberOpts: {
     format: 'json:./reports/json/cucumber_report.json',
-    require: ['../../dist/stepdefinitions/*.js', '../../dist/protractor/helpers/reports/*.js'],
+    require: ['../../dist/tests/step_definitions/*.js', '../../dist/protractor/helpers/*.js'],
     strict: true,
-    tags: '@CucumberScenario or @ProtractorScenario or @TypeScriptScenario or @OutlineScenario',
+    tags: '@cases',
   },
   onComplete: () => {
     Reporter.createHTMLReport();
